@@ -8,8 +8,11 @@ validación de esquema, forecasting de tipo de cambio MXN/USD con modelos
 clásicos y de ML, y generación de reportes. Los nombres y escenarios son
 ficticios y las series se generan con semillas fijas (42 y 7).
 
-> El trabajo nuevo de este repositorio es el dashboard web. El pipeline C++17
-> no aplica aquí: esta base es Python. El dashboard está pendiente.
+> Nota: este repositorio parte del esqueleto de `proyecto_horizonte_v2`. Todo lo
+> que se describe sobre el pipeline de datos es **base heredada**, no trabajo
+> terminado aquí. El trabajo nuevo es el dashboard web, que está **pendiente**;
+> véase "Estado del proyecto". El pipeline C++17 no aplica aquí: esta base es
+> Python.
 
 ## Estructura
 
@@ -74,6 +77,27 @@ También funciona como módulo: `python -m horizonte.cli --help`.
 ```sh
 pytest -q
 ```
+
+## Estado del proyecto
+
+### Base heredada (`proyecto_horizonte_v2`)
+
+El pipeline de datos y sus reportes se incluyen solo como punto de partida y
+referencia. **No constituyen el trabajo de este repositorio.**
+
+- Limpieza y validación de leads, forecasting MXN/USD y generación de reportes
+  sobre datos sintéticos con semillas fijas (42 y 7).
+- Instalable como paquete editable con el comando `tlanesi`.
+- Pruebas con `pytest`; sin dependencias opcionales se usan alternativas
+  (`random walk` con deriva y `GradientBoostingRegressor`).
+
+### Trabajo nuevo de este repositorio
+
+- **Dashboard web: pendiente.** Aún no hay frontend, backend, endpoints ni
+  integración con la base heredada.
+- No se han añadido frameworks ni código de dashboard.
+- Alcance previsto: visualizar los resultados del pipeline heredado (calidad de
+  limpieza, métricas de modelos y pronóstico MXN/USD).
 
 ## Salidas principales
 
