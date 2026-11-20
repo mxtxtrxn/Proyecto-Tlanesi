@@ -15,6 +15,8 @@ dependencies = [
     "scikit-learn>=1.3",
     "matplotlib>=3.7",
     "typer>=0.12",
+    # Typer 0.9/0.12 rompen con Click 8.3 (make_metavar y parseo de opciones).
+    "click>=8.1,<8.2",
 ]
 
 [project.optional-dependencies]

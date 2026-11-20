@@ -86,5 +86,7 @@ pytest -q
 - Sin `statsmodels`, ARIMA se sustituye por un random walk con deriva; sin
   `xgboost`, el modelo de ML usa `GradientBoostingRegressor` de scikit-learn.
   En ambos casos el pipeline corre y las pruebas pasan.
+- `click` se fija en `>=8.1,<8.2`: las versiones de Typer compatibles con este
+  esqueleto rompen con Click 8.3 (falla el parseo de opciones y el `--help`).
 - Los datos son generados con semillas fijas para reproducibilidad.
 - No hay credenciales, datos personales ni secretos en el repositorio.

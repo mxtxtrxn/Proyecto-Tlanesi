@@ -18,7 +18,7 @@ if str(_SRC) not in sys.path:
 from horizonte import config  # noqa: E402
 from horizonte import pipeline  # noqa: E402
 
-app = typer.Typer(help="CLI de Proyecto Horizonte v2 (datos, validación, limpieza y forecasting)")
+app = typer.Typer(help="CLI de Proyecto Tlanesi (datos, validación, limpieza y forecasting)")
 
 
 @app.command("generate-data")

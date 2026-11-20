@@ -24,6 +24,8 @@ def test_validate_leads_raw_detecta_columnas_faltantes():
 
 def test_validate_leads_raw_detecta_valores_no_numericos():
     df = generar_leads(n=50, seed_random=1)
+    # pandas 3.x no permite asignar un str en una columna float sin promover antes.
+    df["monto"] = df["monto"].astype(object)
     df.loc[0, "monto"] = "abc"
     res = validate_leads_raw(df)
     assert not res.ok
