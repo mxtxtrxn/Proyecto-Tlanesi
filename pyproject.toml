@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proyecto-tlanesi"
+version = "0.1.0"
+description = "Pipeline de datos sinteticos, limpieza y forecasting FX"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scikit-learn>=1.3",
+    "matplotlib>=3.7",
+    "typer>=0.12",
+]
+
+[project.optional-dependencies]
+# El codigo ya tiene fallbacks: ARIMA -> random walk con deriva, XGBoost -> GBM de sklearn.
+full = ["statsmodels>=0.14", "xgboost>=2.0"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+tlanesi = "horizonte.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]

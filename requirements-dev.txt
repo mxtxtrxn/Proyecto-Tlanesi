@@ -1,0 +1,2 @@
+# Pruebas. Instalar despues de requirements.txt (o con: pip install -e '.[dev]').
+pytest>=8.0

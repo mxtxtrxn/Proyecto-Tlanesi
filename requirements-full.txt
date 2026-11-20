@@ -1,0 +1,3 @@
+# Modelos opcionales. Solo si el mirror de pip los tiene disponibles.
+statsmodels>=0.14
+xgboost>=2.0
